@@ -1,71 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper & Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
-    <div class="container">
-        <nav class="navbar">
-            <ul class="navbar-list">
-                <li class="navbar-item">
-                    <a class="navbar-link" href="">الرئيسية</a></li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="">حول الموقع</a></li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="">اتصل بنا</a></li>
-                <li class="navbar-item">
-                    <a class="navbar-link" href="">تسجيل</a></li>
-            </ul>
-        </nav>
-    </div>
- <style>
-     *{
-         direction: rtl;
-     }
-     .navbar{
-         background-color: burlywood;
-     }
-     a{
-         color: black;
-     }
-     .navbar-item{
-         display: inline-block;
-         height: 60px;
-         line-height: 40px;
-         width: 5rem;
-         
-     }
-     .navbar-link{
-         text-decoration: none;
-     }
-     
-           h1{ text-align: center;
-                color: blueviolet;}
-           h2{text-align: center;}
-           p{text-align: center;}
- </style>
-
-
-    <h1>
-        HELLO GOOGLE SEARCH
-    </h1>
-    <h2>
-    
-    <img class="border" src="data:image/jpeg;base64,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" alt="google serch">
-    
-</h2>
-    <p>
-          <input type="text" placeholder="search google">
-    
-          <button type="submit">search</button>
-     </p>
+    <section class="game">
         
-    
-    </body>
+        <div class="score fadeOut">
+            <div class="player-score">
+                <h2>Player</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+        </div>
+
+        <div class="intro">
+            <h1 class="animated flipInX slow">Rock Paper and Scissors</h1>
+            <button class="animated infinite tada slow">Let's play</button>
+        </div>
+
+        <div class="match fadeOut">
+            <h2 class="winner">Choose an option</h2>
+            <div class="hands">
+                <img class="player-hand" src="./assets/Rock.png" alt="Player">
+                <img class="computer-hand" src="./assets/Rock.png" alt="Computer">
+            </div>
+
+            <div class="options">
+                <button class="rock">Rock</button>        
+                <button class="paper">Paper</button>
+                <button class="scissors">Scissors</button>
+            </div>
+        </div>
+
+        
+
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
 </html>
